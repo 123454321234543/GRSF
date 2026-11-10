@@ -1,0 +1,89 @@
+{
+  "generated_at_utc": "2026-09-03T09:45:25.708729+00:00",
+  "data_root": "/root/autodl-tmp/data",
+  "source_splits": [
+    "train",
+    "val"
+  ],
+  "output_root": "/root/autodl-tmp/datasets/visdrone_3class",
+  "classes": [
+    {
+      "yolo_class_id": 0,
+      "visdrone_category_id": 1,
+      "name": "pedestrian"
+    },
+    {
+      "yolo_class_id": 1,
+      "visdrone_category_id": 4,
+      "name": "car"
+    },
+    {
+      "yolo_class_id": 2,
+      "visdrone_category_id": 3,
+      "name": "bicycle"
+    }
+  ],
+  "filter": {
+    "score": "> 0",
+    "min_width_px": 4.0,
+    "min_height_px": 4.0,
+    "min_area_px2": 16.0
+  },
+  "split": {
+    "train_ratio": 0.8,
+    "seed": 42
+  },
+  "source_summary": {
+    "train": {
+      "source_images": 6471,
+      "annotation_files": 6471,
+      "selected_images_before_filter": 6465,
+      "selected_images_after_filter": 6465,
+      "missing_source_images": 0,
+      "malformed_rows": 0
+    },
+    "val": {
+      "source_images": 548,
+      "annotation_files": 548,
+      "selected_images_before_filter": 548,
+      "selected_images_after_filter": 548,
+      "missing_source_images": 0,
+      "malformed_rows": 0
+    }
+  },
+  "selected_images_after_filter": 7013,
+  "output_images": {
+    "train": 5610,
+    "val": 1403
+  },
+  "copied_images": 7013,
+  "classes_stats": {
+    "pedestrian": {
+      "selected_annotations_before_filter": 88181,
+      "removed_small_annotations": 1887,
+      "kept_annotations": 86294,
+      "train_annotations": 69532,
+      "val_annotations": 16762,
+      "train_images": 4672,
+      "val_images": 1185
+    },
+    "car": {
+      "selected_annotations_before_filter": 158931,
+      "removed_small_annotations": 475,
+      "kept_annotations": 158456,
+      "train_annotations": 126239,
+      "val_annotations": 32217,
+      "train_images": 5322,
+      "val_images": 1326
+    },
+    "bicycle": {
+      "selected_annotations_before_filter": 11767,
+      "removed_small_annotations": 71,
+      "kept_annotations": 11696,
+      "train_annotations": 9242,
+      "val_annotations": 2454,
+      "train_images": 2496,
+      "val_images": 615
+    }
+  }
+}
